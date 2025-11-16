@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор заказа — Мультивыбор</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: #ffffff;
+          margin: 0;
+          padding: 20px;
+          display: flex;
+          justify-content: center;
+          min-height: 100vh;
+        }
+        .container {
+          background: rgb(252, 203, 249);
+          padding: 25px;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          max-width: 650px;
+          width: 100%;
+        }
+        h1 {
+          text-align: center;
+          margin-bottom: 24px;
+          color: #8400ff75;
+        }
+        .product-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 16px;
+          padding: 12px;
+          background: #eda6f0;
+          border-radius: 8px;
+        }
+        .product-item input[type="checkbox"] {
+          width: 20px;
+          height: 20px;
+        }
+        .product-info {
+          flex: 1;
+        }
+        .product-name {
+          font-weight: 600;
+          margin: 0;
+          color: #5b3161;
+        }
+        .product-price {
+          font-size: 0.9em;
+          color: #44053a;
+          margin: 4px 0 0;
+        }
+        .product-quantity {
+          width: 80px;
+        }
+        button {
+          width: 100%;
+          padding: 14px;
+          background: #ff0fdf;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          font-size: 18px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: background 0.3s;
+        }
+        button:hover {
+          background: #6e0051;
+        }
+        #result {
+          margin-top: 24px;
+          padding: 16px;
+          background: #e24be7;
+          border-radius: 8px;
+          text-align: center;
+          font-size: 18px;
+          font-weight: bold;
+          color: #4e214c;
+          display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Калькулятор заказа</h1>
+
+    <div id="products">
+        <!-- Товары будут добавлены скриптом -->
+    </div>
+
+    <button id="calculateBtn">Рассчитать стоимость</button>
+    <div id="result"></div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
